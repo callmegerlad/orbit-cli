@@ -65,8 +65,9 @@ View the full rendered outputs in [`examples/`](./examples/):
 - [`founder-report.md`](./examples/founder-report.md) — per-venture co-founder update framed against the milestone
 - [`engineering-report.md`](./examples/engineering-report.md) — operational lead report with shipped PRs, blockers, and CI health
 
-> [!NOTE] Important to know!
-> 📝 Every linked claim in those reports is a real evidence item from the fixture. URLs come directly from the snapshot, similar to citations. Orbit **cannot** invent or modify them!
+> 📝 **Important to note**: Every linked claim in those reports is a real evidence item from the fixture. URLs come directly from the snapshot. Think of them like citations!
+> 
+> Orbit **cannot** invent or modify them!
 
 ---
 
@@ -111,9 +112,9 @@ The LLM's only job is audience translation: turning structured evidence into lan
 ### Pre-requisites
 
 - [Python 3.11+](https://www.python.org/downloads/)
-- [`pipx`](https://pipx.pypa.io/stable/installation/) (recommended — installs CLIs in isolated environments)
-- A GitHub personal access token with read access to the configured repos. Fine-grained tokens need read-only access to **Pull requests**, **Issues**, **Contents**, and **Actions**.
-- An OpenAI API key.
+- [`pipx`](https://pipx.pypa.io/stable/how-to/install-pipx/) (recommended — installs CLIs in isolated environments)
+- A [GitHub personal access token (classic)](https://github.com/settings/tokens) with read access to the configured repos (select the scope, `repo`).
+- An [OpenAI API key](https://platform.openai.com/account/api-keys).
 
 ### 1. Install Orbit
 
@@ -123,7 +124,7 @@ Install the latest tagged release directly from GitHub:
 pipx install git+https://github.com/callmegerlad/orbit-cli.git@v0.1.0
 ```
 
-> 📝 Tip: Replace `v0.1.0` with the latest tag listed on the [releases page](https://github.com/callmegerlad/orbit-cli/releases). To upgrade, run `pipx upgrade orbit-cli`.
+> 📝 **Tip**: Replace `v0.1.0` with the latest tag listed on the [releases page](https://github.com/callmegerlad/orbit-cli/releases). To upgrade, run `pipx upgrade orbit-cli`.
 
 If you don't have `pipx`, plain `pip` also works:
 
@@ -155,7 +156,7 @@ export GITHUB_TOKEN=<your-github-token>
 export OPENAI_API_KEY=<your-openai-api-key>
 ```
 
-> ⚠️ Warning: Never commit `.env` and never pass secrets as CLI arguments.
+> ⚠️ **Warning**: Never commit `.env` and never pass secrets as CLI arguments.
 
 ### 3. Initialise your studio config
 
@@ -183,7 +184,7 @@ orbit report founder --venture helios-health -o reports/founder.md
 orbit report leadership -o reports/leadership.md
 ```
 
-> 📝 Tip: Splitting `collect` and `report` lets you generate all three audience reports from a single GitHub fetch — useful when iterating on prompts.
+> 📝 **Tip**: Splitting `collect` and `report` lets you generate all three audience reports from a single GitHub fetch — useful when iterating on prompts.
 
 ### Try Orbit without setting up GitHub
 
