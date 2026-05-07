@@ -1,0 +1,238 @@
+{
+  "studio_name": "Orbital Ventures",
+  "period": "7d",
+  "generated_at": "2026-05-07T09:00:00+00:00",
+  "ventures": [
+    {
+      "id": "helios-health",
+      "name": "Helios Health",
+      "stakeholder": "Priya",
+      "milestone": "HIPAA-compliant patient portal pilot with first 2 clinics",
+      "watch_items": ["patient onboarding", "audit logging", "auth hardening"],
+      "repos": ["orbital-ventures/helios-api", "orbital-ventures/helios-portal"],
+      "evidence": [
+        {
+          "source_type": "pull_request",
+          "venture": "Helios Health",
+          "repo": "orbital-ventures/helios-api",
+          "title": "Implement audit log retention policy (7-year window)",
+          "url": "https://github.com/orbital-ventures/helios-api/pull/214",
+          "author": "avery",
+          "created_at": "2026-05-02T10:15:00+00:00",
+          "updated_at": "2026-05-05T16:42:00+00:00",
+          "state": "merged",
+          "labels": ["compliance", "audit-log"],
+          "summary": "Adds an immutable audit log retention policy aligned with HIPAA's 7-year requirement. Includes a nightly archival job and S3 object-lock configuration.",
+          "raw_metadata": {"number": 214, "merged_at": "2026-05-05T16:42:00+00:00", "draft": false}
+        },
+        {
+          "source_type": "pull_request",
+          "venture": "Helios Health",
+          "repo": "orbital-ventures/helios-portal",
+          "title": "Patient onboarding email verification flow",
+          "url": "https://github.com/orbital-ventures/helios-portal/pull/189",
+          "author": "ben",
+          "created_at": "2026-05-01T08:30:00+00:00",
+          "updated_at": "2026-05-04T14:05:00+00:00",
+          "state": "merged",
+          "labels": ["onboarding"],
+          "summary": "Replaces magic-link auth with verified email + TOTP for new patient sign-ups, ahead of the clinic pilot.",
+          "raw_metadata": {"number": 189, "merged_at": "2026-05-04T14:05:00+00:00", "draft": false}
+        },
+        {
+          "source_type": "pull_request",
+          "venture": "Helios Health",
+          "repo": "orbital-ventures/helios-portal",
+          "title": "Add accessibility audit to onboarding screens",
+          "url": "https://github.com/orbital-ventures/helios-portal/pull/192",
+          "author": "casey",
+          "created_at": "2026-05-06T11:00:00+00:00",
+          "updated_at": "2026-05-06T17:20:00+00:00",
+          "state": "open",
+          "labels": ["accessibility", "onboarding"],
+          "summary": "Wires axe-core into the Playwright suite and fixes 4 contrast issues on the onboarding stepper.",
+          "raw_metadata": {"number": 192, "draft": false, "requested_reviewers": ["avery"]}
+        },
+        {
+          "source_type": "commit",
+          "venture": "Helios Health",
+          "repo": "orbital-ventures/helios-api",
+          "title": "Tighten session token rotation interval to 15 minutes",
+          "url": "https://github.com/orbital-ventures/helios-api/commit/7e6400b",
+          "author": "ben",
+          "created_at": "2026-05-05T09:12:00+00:00",
+          "raw_metadata": {"sha": "7e6400b"}
+        },
+        {
+          "source_type": "commit",
+          "venture": "Helios Health",
+          "repo": "orbital-ventures/helios-api",
+          "title": "Bump @aws-sdk/client-s3 to 3.620.0",
+          "url": "https://github.com/orbital-ventures/helios-api/commit/c41ad9f",
+          "author": "avery",
+          "created_at": "2026-05-03T18:44:00+00:00",
+          "raw_metadata": {"sha": "c41ad9f"}
+        },
+        {
+          "source_type": "workflow_run",
+          "venture": "Helios Health",
+          "repo": "orbital-ventures/helios-api",
+          "title": "ci",
+          "url": "https://github.com/orbital-ventures/helios-api/actions/runs/9412037",
+          "created_at": "2026-05-06T17:21:00+00:00",
+          "updated_at": "2026-05-06T17:34:00+00:00",
+          "state": "success",
+          "raw_metadata": {"run_id": 9412037, "branch": "main", "event": "push"}
+        }
+      ],
+      "signals": [],
+      "confidence": "Medium"
+    },
+    {
+      "id": "atlas-logistics",
+      "name": "Atlas Logistics",
+      "stakeholder": "Marco",
+      "milestone": "Route optimisation beta with 5 fleet customers",
+      "watch_items": ["route optimisation accuracy", "dispatcher UI", "telemetry ingestion"],
+      "repos": ["orbital-ventures/atlas-router", "orbital-ventures/atlas-dashboard"],
+      "evidence": [
+        {
+          "source_type": "pull_request",
+          "venture": "Atlas Logistics",
+          "repo": "orbital-ventures/atlas-router",
+          "title": "Faster shortest-path with bidirectional Dijkstra",
+          "url": "https://github.com/orbital-ventures/atlas-router/pull/88",
+          "author": "devi",
+          "created_at": "2026-05-02T07:30:00+00:00",
+          "updated_at": "2026-05-04T19:11:00+00:00",
+          "state": "merged",
+          "labels": ["routing", "performance"],
+          "summary": "Reduces median routing latency by ~40% on the 200-stop benchmark; behind a feature flag for two pilot customers.",
+          "raw_metadata": {"number": 88, "merged_at": "2026-05-04T19:11:00+00:00", "draft": false}
+        },
+        {
+          "source_type": "pull_request",
+          "venture": "Atlas Logistics",
+          "repo": "orbital-ventures/atlas-dashboard",
+          "title": "Redesign dispatcher dashboard with live ETA column",
+          "url": "https://github.com/orbital-ventures/atlas-dashboard/pull/56",
+          "author": "jamie",
+          "created_at": "2026-05-02T15:00:00+00:00",
+          "updated_at": "2026-05-03T10:22:00+00:00",
+          "state": "open",
+          "labels": ["dispatcher-ui", "needs-review"],
+          "summary": "Adds a live ETA column and route-progress sparkline to the dispatcher dashboard. Awaiting review since 5 May.",
+          "raw_metadata": {"number": 56, "draft": false, "requested_reviewers": ["devi"]}
+        },
+        {
+          "source_type": "issue",
+          "venture": "Atlas Logistics",
+          "repo": "orbital-ventures/atlas-router",
+          "title": "Driver ETAs drift by ~3 min after daylight-savings switch",
+          "url": "https://github.com/orbital-ventures/atlas-router/issues/102",
+          "author": "marco",
+          "created_at": "2026-05-04T08:50:00+00:00",
+          "updated_at": "2026-05-06T13:00:00+00:00",
+          "state": "open",
+          "labels": ["bug", "dispatcher-ui"],
+          "summary": "Two pilot fleets reported ETAs drifting ~3 minutes after the timezone change. Reproducible on staging.",
+          "raw_metadata": {"number": 102}
+        },
+        {
+          "source_type": "commit",
+          "venture": "Atlas Logistics",
+          "repo": "orbital-ventures/atlas-router",
+          "title": "Cache traffic tiles for 60s to reduce Mapbox spend",
+          "url": "https://github.com/orbital-ventures/atlas-router/commit/a18bf02",
+          "author": "devi",
+          "created_at": "2026-05-06T09:18:00+00:00",
+          "raw_metadata": {"sha": "a18bf02"}
+        },
+        {
+          "source_type": "commit",
+          "venture": "Atlas Logistics",
+          "repo": "orbital-ventures/atlas-dashboard",
+          "title": "Add Storybook stories for dispatcher dashboard widgets",
+          "url": "https://github.com/orbital-ventures/atlas-dashboard/commit/d2f5c91",
+          "author": "jamie",
+          "created_at": "2026-05-05T12:01:00+00:00",
+          "raw_metadata": {"sha": "d2f5c91"}
+        },
+        {
+          "source_type": "workflow_run",
+          "venture": "Atlas Logistics",
+          "repo": "orbital-ventures/atlas-router",
+          "title": "ci",
+          "url": "https://github.com/orbital-ventures/atlas-router/actions/runs/9408119",
+          "created_at": "2026-05-06T09:20:00+00:00",
+          "updated_at": "2026-05-06T09:31:00+00:00",
+          "state": "success",
+          "raw_metadata": {"run_id": 9408119, "branch": "main", "event": "push"}
+        }
+      ],
+      "signals": [],
+      "confidence": "Medium"
+    },
+    {
+      "id": "lumen-edu",
+      "name": "Lumen Edu",
+      "stakeholder": "Téa",
+      "milestone": "Classroom MVP live with 3 partner schools",
+      "watch_items": ["assignment flow", "teacher reporting", "push notifications"],
+      "repos": ["orbital-ventures/lumen-classroom", "orbital-ventures/lumen-mobile"],
+      "evidence": [
+        {
+          "source_type": "issue",
+          "venture": "Lumen Edu",
+          "repo": "orbital-ventures/lumen-mobile",
+          "title": "Push notifications silently failing on iOS 18.4",
+          "url": "https://github.com/orbital-ventures/lumen-mobile/issues/44",
+          "author": "tea",
+          "created_at": "2026-05-03T16:10:00+00:00",
+          "updated_at": "2026-05-06T20:45:00+00:00",
+          "state": "open",
+          "labels": ["blocker", "mobile", "notifications"],
+          "summary": "APNs receipts succeed but no banner is shown on iOS 18.4 devices. Confirmed on two pilot teachers' phones; blocks the partner-school launch.",
+          "raw_metadata": {"number": 44}
+        },
+        {
+          "source_type": "issue",
+          "venture": "Lumen Edu",
+          "repo": "orbital-ventures/lumen-classroom",
+          "title": "Teachers can save an assignment with no due date",
+          "url": "https://github.com/orbital-ventures/lumen-classroom/issues/77",
+          "author": "morgan",
+          "created_at": "2026-05-05T09:05:00+00:00",
+          "updated_at": "2026-05-05T09:05:00+00:00",
+          "state": "open",
+          "labels": ["bug", "assignment-flow"],
+          "summary": "Validation gap in the assignment editor lets teachers publish assignments with no due date, which then never appear in the student feed.",
+          "raw_metadata": {"number": 77}
+        },
+        {
+          "source_type": "commit",
+          "venture": "Lumen Edu",
+          "repo": "orbital-ventures/lumen-classroom",
+          "title": "wip: spike on assignment flow refactor",
+          "url": "https://github.com/orbital-ventures/lumen-classroom/commit/3a07c8e",
+          "author": "morgan",
+          "created_at": "2026-05-04T22:50:00+00:00",
+          "raw_metadata": {"sha": "3a07c8e"}
+        },
+        {
+          "source_type": "workflow_run",
+          "venture": "Lumen Edu",
+          "repo": "orbital-ventures/lumen-mobile",
+          "title": "ci",
+          "url": "https://github.com/orbital-ventures/lumen-mobile/actions/runs/9410882",
+          "created_at": "2026-05-06T11:02:00+00:00",
+          "updated_at": "2026-05-06T11:18:00+00:00",
+          "state": "failure",
+          "raw_metadata": {"run_id": 9410882, "branch": "main", "event": "push"}
+        }
+      ],
+      "signals": [],
+      "confidence": "Medium"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+# Orbit configuration. Copy to `orbit.yaml` and edit for your studio.
+
+studio:
+  name: "Orbital Ventures"
+
+ventures:
+  - id: "helios-health"
+    name: "Helios Health"
+    repos:
+      - "orbital-ventures/helios-api"
+      - "orbital-ventures/helios-portal"
+    stakeholder: "Priya"
+    milestone: "HIPAA-compliant patient portal pilot with first 2 clinics"
+    watch_items:
+      - "patient onboarding"
+      - "audit logging"
+      - "auth hardening"
+
+  - id: "atlas-logistics"
+    name: "Atlas Logistics"
+    repos:
+      - "orbital-ventures/atlas-router"
+      - "orbital-ventures/atlas-dashboard"
+    stakeholder: "Marco"
+    milestone: "Route optimisation beta with 5 fleet customers"
+    watch_items:
+      - "route optimisation accuracy"
+      - "dispatcher UI"
+      - "telemetry ingestion"
+
+  - id: "lumen-edu"
+    name: "Lumen Edu"
+    repos:
+      - "orbital-ventures/lumen-classroom"
+      - "orbital-ventures/lumen-mobile"
+    stakeholder: "Téa"
+    milestone: "Classroom MVP live with 3 partner schools"
+    watch_items:
+      - "assignment flow"
+      - "teacher reporting"
+      - "push notifications"
+
+defaults:
+  period: "7d"
+  github_user: "your-github-handle"
