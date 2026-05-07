@@ -29,6 +29,8 @@ Studios run multiple ventures in parallel, and the engineering activity is fragm
 
 Producing those three views by hand means scanning GitHub once a week and rewriting the same activity in three different voices.
 
+![Showcase of Orbit running in a terminal](examples/showcase.png)
+
 ### What is Orbit?
 
 **Orbit** is a CLI tool that performs the cross-venture scanning and does the first drafting.
