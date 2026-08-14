@@ -13,7 +13,7 @@ from orbit.config import parse_period_to_hours
 from orbit.models import Audience, EvidenceItem, StudioSnapshot, VentureSnapshot
 from orbit.runtime import optional_env, require_env
 
-DEFAULT_MODEL = "gpt-5-mini"
+DEFAULT_MODEL = "gpt-5.4-mini"
 
 
 class LLMError(Exception):
